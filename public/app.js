@@ -18,6 +18,7 @@ var populateList = function(countries) {
   dropDownList.addEventListener("change", function(event) {
     var ulCountryInfo = document.getElementById("country-info");
     ulCountryInfo.innerHTML = "";
+
     var liCountryName = document.createElement("liCountryName");
     var liCountryPopulation = document.createElement("liCountryPopulation");
     var liCountryCapital = document.createElement("liCountryCapital");
