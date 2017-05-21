@@ -20,6 +20,10 @@ var populateList = function(countries) {
     ulCountryInfo.innerHTML = "";
     var liCountryName = document.createElement("liCountryName");
     var liCountryPopulation = document.createElement("liCountryPopulation");
+    var liCountryCapital = document.createElement("liCountryCapital");
+    var liCountryRegion = document.createElement("liCountryRegion");
+    var liCountrySubRegion = document.createElement("liCountrySubRegion");
+    var liCountryBorders = document.createElement("liCountryBorders");
 
     var chosenCountryName = event.target.value;
 
@@ -28,10 +32,18 @@ var populateList = function(countries) {
     });
 
     liCountryName.innerText = chosenCountry.name;
-    liCountryPopulation.innerText = "Population: " + chosenCountry.population;
+    liCountryPopulation.innerText = "\nPopulation: " + chosenCountry.population;
+    liCountryCapital.innerText = "\nCapital city: " + chosenCountry.capital;
+    liCountryRegion.innerText = "\nRegion: " + chosenCountry.region;
+    liCountrySubRegion.innerText = "\nSub-region: " + chosenCountry.subregion;
+    liCountryBorders.innerText = "\nBordering countries: " + chosenCountry.borders;
 
     ulCountryInfo.appendChild(liCountryName);
     ulCountryInfo.appendChild(liCountryPopulation);
+    ulCountryInfo.appendChild(liCountryCapital);
+    ulCountryInfo.appendChild(liCountryRegion);
+    ulCountryInfo.appendChild(liCountrySubRegion);
+    ulCountryInfo.appendChild(liCountryBorders);
   });
 
   countries.forEach(function(country){
