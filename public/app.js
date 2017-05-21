@@ -24,7 +24,6 @@ var populateList = function(countries) {
     var liCountryCapital = document.createElement("liCountryCapital");
     var liCountryRegion = document.createElement("liCountryRegion");
     var liCountrySubRegion = document.createElement("liCountrySubRegion");
-    var liCountryBorders = document.createElement("liCountryBorders");
     var imgCountryFlag = document.createElement("imgCountryFlag");
 
     var chosenCountryName = event.target.value;
@@ -33,21 +32,19 @@ var populateList = function(countries) {
       return chosenCountryName === country.name;
     });
 
-    liCountryName.innerText = chosenCountry.name;
+    liCountryName.innerText = "\n" + chosenCountry.name;
     liCountryPopulation.innerText = "\nPopulation: " + chosenCountry.population;
     liCountryCapital.innerText = "\nCapital city: " + chosenCountry.capital;
     liCountryRegion.innerText = "\nRegion: " + chosenCountry.region;
     liCountrySubRegion.innerText = "\nSub-region: " + chosenCountry.subregion;
-    liCountryBorders.innerText = "\nBordering countries: " + chosenCountry.borders;
     imgCountryFlag.innerHTML = "<img src=" + chosenCountry.flag + " />";
 
+    ulCountryInfo.appendChild(imgCountryFlag);
     ulCountryInfo.appendChild(liCountryName);
     ulCountryInfo.appendChild(liCountryPopulation);
     ulCountryInfo.appendChild(liCountryCapital);
     ulCountryInfo.appendChild(liCountryRegion);
     ulCountryInfo.appendChild(liCountrySubRegion);
-    ulCountryInfo.appendChild(liCountryBorders);
-    ulCountryInfo.appendChild(imgCountryFlag);
   });
 
   countries.forEach(function(country){
