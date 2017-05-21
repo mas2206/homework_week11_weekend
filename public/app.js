@@ -39,12 +39,18 @@ var populateList = function(countries) {
     liCountrySubRegion.innerText = "\nSub-region: " + chosenCountry.subregion;
     imgCountryFlag.innerHTML = "<img src=" + chosenCountry.flag + " />";
 
+    // var map = document.getElementById("country-map");
+    // var center = {lat: chosenCountry.latLng[0], lng: chosenCountry.latLng[1]};
+    // var countryMap = new MapWrapper(map, center, 5);
+    // countryMap.addMarker(center);
+
     ulCountryInfo.appendChild(imgCountryFlag);
     ulCountryInfo.appendChild(liCountryName);
     ulCountryInfo.appendChild(liCountryPopulation);
     ulCountryInfo.appendChild(liCountryCapital);
     ulCountryInfo.appendChild(liCountryRegion);
     ulCountryInfo.appendChild(liCountrySubRegion);
+    // map.appendChild(countryMap);
   });
 
   countries.forEach(function(country){
@@ -56,7 +62,6 @@ var populateList = function(countries) {
 
 var makeRequest = function(url, callback){
   var request = new XMLHttpRequest();
-
   request.open("GET", url);
   request.addEventListener("load", callback);
   request.send();

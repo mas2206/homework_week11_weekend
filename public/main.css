@@ -6,3 +6,15 @@ img {
 body {
   background-color: #ccf2ff;
 }
+
+h1 {
+  font-family: Courier;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+liCountryName {
+  font-family: Courier;
+  font-size: 22px;
+  font-weight: bold;
+}
