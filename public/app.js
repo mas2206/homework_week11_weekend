@@ -24,6 +24,7 @@ var populateList = function(countries) {
     var liCountryRegion = document.createElement("liCountryRegion");
     var liCountrySubRegion = document.createElement("liCountrySubRegion");
     var liCountryBorders = document.createElement("liCountryBorders");
+    var imgCountryFlag = document.createElement("imgCountryFlag");
 
     var chosenCountryName = event.target.value;
 
@@ -37,6 +38,7 @@ var populateList = function(countries) {
     liCountryRegion.innerText = "\nRegion: " + chosenCountry.region;
     liCountrySubRegion.innerText = "\nSub-region: " + chosenCountry.subregion;
     liCountryBorders.innerText = "\nBordering countries: " + chosenCountry.borders;
+    imgCountryFlag.innerHTML = "<img src=" + chosenCountry.flag + " />";
 
     ulCountryInfo.appendChild(liCountryName);
     ulCountryInfo.appendChild(liCountryPopulation);
@@ -44,6 +46,7 @@ var populateList = function(countries) {
     ulCountryInfo.appendChild(liCountryRegion);
     ulCountryInfo.appendChild(liCountrySubRegion);
     ulCountryInfo.appendChild(liCountryBorders);
+    ulCountryInfo.appendChild(imgCountryFlag);
   });
 
   countries.forEach(function(country){
