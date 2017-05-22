@@ -18,3 +18,8 @@ liCountryName {
   font-size: 22px;
   font-weight: bold;
 }
+
+#country-map {
+  width: 400px;
+  height: 400px;
+}

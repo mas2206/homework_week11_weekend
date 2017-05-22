@@ -39,10 +39,11 @@ var populateList = function(countries) {
     liCountrySubRegion.innerText = "\nSub-region: " + chosenCountry.subregion;
     imgCountryFlag.innerHTML = "<img src=" + chosenCountry.flag + " />";
 
-    // var map = document.getElementById("country-map");
-    // var center = {lat: chosenCountry.latLng[0], lng: chosenCountry.latLng[1]};
-    // var countryMap = new MapWrapper(map, center, 5);
-    // countryMap.addMarker(center);
+    var map = document.getElementById("country-map");
+    console.log(chosenCountry)
+    var center = {lat: chosenCountry.latlng[0], lng: chosenCountry.latlng[1]};
+    var countryMap = new MapWrapper(map, center, 3);
+    countryMap.addMarker(center);
 
     ulCountryInfo.appendChild(imgCountryFlag);
     ulCountryInfo.appendChild(liCountryName);
@@ -50,7 +51,6 @@ var populateList = function(countries) {
     ulCountryInfo.appendChild(liCountryCapital);
     ulCountryInfo.appendChild(liCountryRegion);
     ulCountryInfo.appendChild(liCountrySubRegion);
-    // map.appendChild(countryMap);
   });
 
   countries.forEach(function(country){
