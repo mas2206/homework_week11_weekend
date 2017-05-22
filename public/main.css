@@ -19,7 +19,14 @@ liCountryName {
   font-weight: bold;
 }
 
+ul {
+  width: 300px;
+}
+
 #country-map {
   width: 400px;
   height: 400px;
+  float: right;
+  margin-top: -350px;
+  margin-right: 450px;
 }

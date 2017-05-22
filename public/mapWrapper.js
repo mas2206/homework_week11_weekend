@@ -10,6 +10,7 @@ MapWrapper.prototype = {
     var marker = new google.maps.Marker({
       position: coords,
       map: this.googleMap,
+      animation: google.maps.Animation.DROP
     });
     return marker;
   }
